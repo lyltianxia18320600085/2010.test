@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.min.css">
+    <script src="./js/jquery-1.10.1.min.js"></script>
+    <script src="./js/zhuche.js"></script>
+    <script src="./js/content.js"></script>
+    <link rel="stylesheet" href="./icon-font/iconfont.css">
+</head>
+
+<body>
+    <!-- 首页头部 -->
+    <header class="head">
+        <div class="head_center">
+            <img src="./img/logo.png" alt="">
+            <div class="head_btn">
+                <input type="text" placeholder="&nbsp;请输入商品名称">
+                <button>搜索</button>
+            </div>
+            <p><button class="denglu">登录</button></p>
+        </div>
+    </header>
+    <!-- 首页 登录 注册 -->
+    <section class="mask">
+        <div class="login">
+            <div class="dtop">
+                <p>欢迎登录</p>
+                <button class="ddel">X</button>
+            </div>
+            <form action="">
+                <p>
+                    <label for="">用户名：</label>
+                    <input type="text" class="username">
+                    <span></span>
+                </p>
+                <p>
+                    <label for="">密码：</label>
+                    <input type="text" class="password">
+                    <span></span>
+                </p>
+                <p>
+                    <input type="checkbox" class="checkbox">
+                    <label for="">请勾选</label><a href="">用户名协议</a>
+                </p>
+                <input disabled type="button" value="登录" id="dlu">
+                </p>
+            </form>
+        </div>
+    </section>
+    <!-- 首页主要内容 -->
+    <article class="content">
+        <!-- 首页右侧导航栏， 背景轮播图  -->
+        <section class="headBanner">
+            <div class="hb_right">
+                <ul class="nav_left">
+                    <li><a href=""><span class="iconfont icon-pinpaiqingcang"></span>清仓</a></li>
+                    <li><a href=""><span class="iconfont icon-muying"></span> 母婴</a></li>
+                    <li><a href=""><span class="iconfont icon-shipin-tianpin"></span>食品</a> </li>
+                    <li><a href=""><span class="iconfont icon-shangyi-"></span>内衣</a> </li>
+                    <li><a href=""><span class="iconfont icon-nanzhuang"></span> 男装</a></li>
+                    <li> <a href=""><span class="iconfont icon-zu"></span>电器</a> </li>
+                    <li> <a href=""><span class="iconfont icon-yundong"></span>运动</a></li>
+                    <li> <a href=""><span class="iconfont icon-qiche"></span>汽车</a></li>
+                </ul>
+                <ul class="nav_right">
+                    <li> <a href=""><span class="iconfont icon-baihuo"></span>百货</a> </li>
+                    <li> <a href=""><span class="iconfont icon-nvzhuang"></span>女装</a></li>
+                    <li> <a href=""><span class="iconfont icon-meizhuang "></span>美妆</a> </li>
+                    <li> <a href=""><span class="iconfont icon-xiebaopeishizhuanhuan"></span>鞋包</a> </li>
+                    <li><a href=""><span class="iconfont icon-wenju"></span> 文具</a> </li>
+                    <li> <a href=""><span class="iconfont icon-jiajujiafang"></span>家纺</a> </li>
+                    <li><a href=""><span class="iconfont icon-jiazhuang"></span>家装</a> </li>
+                    <li> <a href=""><span class="iconfont icon-shuiguo"></span>水果</a> </li>
+                </ul>
+            </div>
+            <div class="hb_left">
+                <p>
+                    <span><img src="./img/blogo.png" alt="" class="hs1"></span>
+                    <span class="hs2">个性主题</span>
+                    <spanclass="hs3">热门专题，放心选购</span>
+                    <span class="hs4"><a href="">更多></a></span>
+                </p>
+                <div class="banner">
+                    <div class="banner_l">
+                        <div class="btn_l"><span class="iconfont icon-xiangzuo"></span></div>
+                        <div class="btn_r"> <span class="iconfont icon-xiangyou"></span></div>
+                        <nav>
+                            <img src="./img/banner5.jpg" alt="">
+                            <img src="./img/banner1.jpg" alt="">
+                            <img src="./img/banner2.jpg" alt="">
+                            <img src="./img/banner3.jpg" alt="">
+                            <img src="./img/banner4.jpg" alt="">
+                            <img src="./img/banner5.jpg" alt="">
+                            <img src="./img/banner1.jpg" alt="">
+                        </nav>
+                    </div>
+                    <div class="banner_r">
+                        <p>开年补贴项目</p>
+                        <div class="smallnav">
+                            <nav class="s1">
+                                <li><img src="./img/br1.jpeg" alt=""></li>
+                                <li><img src="./img/br2.jpeg" alt=""></li>
+                                <li><img src="./img/br3.jpeg" alt=""></li>
+                            </nav>
+                            <nav class="s2">
+                                <li><img src="./img/br4.jpeg" alt=""></li>
+                                <li><img src="./img/br5.jpeg" alt=""></li>
+                                <li><img src="./img/br6.jpeg" alt=""></li>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 热销爆款 -->
+        <section class="hotBuy">
+
+        </section>
+    </article>
+    <script>
+       $.ajax({
+           url:'./json/hotlist.json',
+           success:function(res){
+               console.log(res);
+           }
+       })
+    </script>
+</body>
+
+</html>

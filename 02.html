@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./pdd/js/jquery-1.10.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 3000px;
+            width: 100%;
+        }
+        nav{
+            position: fixed;
+            right: 50px;
+           bottom:100px;
+            background-color: blue;
+            display: none;
+        }
+        li{
+            width: 50px;
+            height: 50px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </nav>
+    <script>
+        $(function(){
+            $(document).scroll(function(){
+            if($(document).scrollTop() > 1500){
+                $('nav').show()
+            }
+            $('li:eq(0)').click(function(){
+           $('html,body').stop().animate({
+              scrollTop:0
+           },800,function(){
+
+           })
+        })
+        })
+        })
+      
+    </script>
+</body>
+</html>
